@@ -4,6 +4,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
@@ -27,6 +28,68 @@ body {
   overflow: hidden;
 }
 
+.fa-windows:before {
+  content: "\f17a";
+  font-family: "fontAwesome";
+}
+
+.fa-home:before {
+  content: "\f015";
+  font-family: "fontAwesome";
+}
+
+.fa-user:before {
+  content: "\f007";
+  font-family: "fontAwesome";
+}
+
+.fa-comment:before {
+  content: "\f075";
+  font-family: "fontAwesome";
+}
+
+.fa-question-circle:before {
+  content: "\f059";
+  font-family: "fontAwesome";
+}
+
+.fa-gear:before,
+.fa-cog:before {
+  content: "\f013";
+  font-family: "fontAwesome";
+}
+
+.fa-unlock-alt:before {
+  content: "\f13e";
+  font-family: "fontAwesome";
+}
+
+.fa-sign-out:before {
+  content: "\f08b";
+  font-family: "fontAwesome";
+}
+
+.fa-eye:before {
+  content: "\f06e";
+  font-family: "fontAwesome";
+}
+
+.fa-shopping-cart:before {
+  content: "\f07a";
+  font-family: "fontAwesome";
+}
+
+.fa-dollar:before,
+.fa-usd:before {
+  content: "\f155";
+  font-family: "fontAwesome";
+}
+
+.fa-search:before {
+  content: "\f002";
+  font-family: "fontAwesome";
+}
+
 .navigation.active {
   width: 60px;
 }
@@ -45,7 +108,7 @@ body {
 }
 
 .navigation ul li:hover {
-  background: #03a9f4;
+  background: #003147;
 }
 
 .navigation ul li:nth-child(1):hover {
@@ -126,6 +189,7 @@ body {
   line-height: 60px;
   text-align: center;
   color: #111;
+  font-size: 30px;
 }
 
 .search {
@@ -146,7 +210,7 @@ body {
   padding: 5px 36px;
   padding-left: 35px;
   outline: none;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  border: 1px soid rgba(0, 0, 0, 0.2);
 }
 
 .search label .fa {
@@ -198,10 +262,221 @@ body {
 
 .cardBox .card .cardName {
   color: #999;
+  margin-top: 10px;
 }
 
 .cardBox .card .iconBox {
   font-size: 2.5em;
   /* color: #03a9f4; */
   color: #009688;
+}
+
+.details {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 2fr 1fr;
+}
+
+.details .recentOrders {
+  position: relative;
+  min-height: 530px;
+  background: #fff;
+  padding: 20px;
+}
+
+.cardheader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.cardheader h2 {
+  font-weight: 600;
+}
+
+.btn {
+  position: relative;
+  padding: 5px 10px;
+  background: #009688;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.details table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.details .recentOrders table {
+  font-weight: 600;
+}
+
+.details .recentOrders table tr {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.details,
+.recentOrders table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.details .recentOrders table tbody tr:hover {
+  background-color: #009688;
+  color: #fff;
+}
+
+.details .recentOrders table tr td {
+  padding: 9px 5px;
+}
+
+.status {
+  position: relative;
+  padding: 2px 4px;
+  background: #f00;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.delivered {
+  background: #8de02c;
+}
+
+.pending {
+  background: #f9ca3f;
+}
+
+.return {
+  background: #f00;
+}
+
+.inprogress {
+  background: #03a9f4;
+}
+
+.details .recentCustomers {
+  position: relative;
+  min-height: 530px;
+  background: #fff;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.details .recentCustomers .imgBx {
+  position: relative;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.details .recentCustomers .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.details .recentCustomers table tr td h4 span {
+  font-size: 14px;
+  color: #999;
+}
+
+.details .recentCustomers table tr:hover,
+.details .recentCustomers table tr:hover td h4 span {
+  background: #009688;
+  color: #fff;
+}
+
+.details .recentCustomers table tr td {
+  padding: 7px 10px;
+}
+
+.details .recentCustomers table tr td h4 {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.2em;
+}
+
+/* Responsive */
+
+@media only screen and (max-width: 992px) {
+  .navigation {
+    left: -300px;
+  }
+  .navigation.active {
+    left: 0;
+    width: 300px;
+  }
+  .main {
+    width: 100%;
+    left: 0;
+  }
+  .main.active {
+    width: calc(100% - 300px);
+    left: 300px;
+  }
+  .cardBox {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .details {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .cardheader h2 {
+    font-weight: 600;
+    font-size: 1.3rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .cardBox {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .details .recentOrders {
+    overflow-x: auto;
+  }
+
+  .details .recentOrders table {
+    width: 600px;
+  }
+
+  .navigation {
+    width: 100%;
+    left: -100%;
+    z-index: 1000;
+  }
+
+  .navigation.active {
+    width: 100%;
+    left: 0;
+  }
+  .toggle.active {
+    z-index: 10000;
+    position: fixed;
+    right: 0;
+    left: initial;
+  }
+  .toggle.active::before {
+    color: #fff;
+    font-size: 30px;
+    /* margin-left: 50px; */
+  }
+  .main,
+  .main.active {
+    width: 100%;
+    left: 0;
+  }
 }
